@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>App.html</title>
 
     <link rel="stylesheet" href="estilo.css">
     <script src='jogo.js'> </script>
@@ -16,18 +16,20 @@
             <img id='v2' src="imagens/coracao_cheio.png">
             <img id='v3' src="imagens/coracao_cheio.png">
             <div class="cronometro">
-                Tempo restante: ?
+                Tempo restante: <span id="cronometro"></span>
             </div>
         </div>
     </div>
     
 
     <script>
-        posicaoRandomica()
+        document.getElementById("cronometro").innerHTML = tempo;
 
-        setInterval(function(){
+        //posicaoRandomica()
+
+        var criaMosquito = setInterval(function(){
             posicaoRandomica()
-        }, 2000)
+        }, criaMosquitoTempo)
     </script>
 </body>
 </html>
